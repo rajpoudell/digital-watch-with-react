@@ -2,15 +2,22 @@ import React, { useState } from 'react'
 import './time.css'
 
 export const Time = () => {
-    // const[clock,setclock] =useState("")
 
-    var currentDate = new Date();
-    var currentTime = currentDate.toLocaleTimeString();
+    var currentTime = new Date().toLocaleTimeString();
+    
     console.log(currentTime)
+    const[clock,setclock] =useState(currentTime)
+    const updatedTime = ()=>{
+       var currentTime = new Date().toLocaleTimeString();
+       setclock(currentTime)
+
+   }
+   setInterval(updatedTime,1000)
+   
   return(
     <div className='time--main'>
         <div className="time--clock">
-            {currentTime}
+            <h1 >{currentTime}</h1>
         </div>
 
     </div>
