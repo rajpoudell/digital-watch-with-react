@@ -6,8 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm install`
-
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -16,34 +14,57 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-In this code 
-###
- `var currentTime = new Date().toLocaleTimeString();`
+### `npm test`
 
-This line initializes the currentTime variable with the current time in the format based on the user's locale settings. For example, it might look like "12:34:56 PM" or "14:34:56" depending on the user's system settings.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-`console.log(currentTime);`
+### `npm run build`
 
-This line prints the initial value of currentTime to the console.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-`const [clock, setClock] = useState(currentTime);`
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-This line declares a state variable clock using the useState hook and sets its initial value to currentTime. The setClock function is used to update the value of clock.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-`const updatedTime = () => { ... }`
+### `npm run eject`
 
-This line declares a function called updatedTime. This function will be used to update the clock state variable.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-`var currentTime = new Date().toLocaleTimeString();`
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Inside the updatedTime function, this line updates the currentTime variable with the current time.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-`setClock(currentTime);`
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-This line calls the setClock function to update the value of the clock state variable with the new currentTime value.
+## Learn More
 
-`setInterval(updatedTime, 1000);`
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-This line sets up an interval that calls the updatedTime function every 1000 milliseconds (1 second). It ensures that the clock state variable is updated with the current time every second.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Overall, this code initializes the clock state variable with the current time and then updates it every second using setInterval and the updatedTime function. This allows you to display a live clock that continuously shows the current time and updates dynamically.
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

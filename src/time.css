@@ -6,7 +6,7 @@
     right: 30%;
     letter-spacing: 2px;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 50px;
     cursor: pointer;
     transition: 0.4s;
     border-radius: 20px;
@@ -16,5 +16,13 @@
     background-color: rgba(154, 204, 204, 0.459);
 }
 .time--clock h1{
-    font-weight: 400;
+    font-weight: 600;
+    
+}
+h1{
+    line-height: 120%;
+    background: linear-gradient(90deg,#0a0a0a 40%,#9e08fb 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }

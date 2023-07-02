@@ -1,10 +1,9 @@
-import { Time } from "./Time";
-import React from "react";
+import Time from "./Time";
 function App() {
   return (
     <div className="App">
       <Time/>
-      </div>
+    </div>
   );
 }
 

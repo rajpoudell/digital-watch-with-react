@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import './time.css'
+import React, { useState } from 'react';
+import './time.css';
 
-export const Time = () => {
+ export default function Time() {
 
     var currentTime = new Date().toLocaleTimeString();
     
@@ -21,5 +21,5 @@ export const Time = () => {
         </div>
 
     </div>
-  )
+  );
 }
