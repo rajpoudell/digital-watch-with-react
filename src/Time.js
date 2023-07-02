@@ -13,7 +13,7 @@ export const Time = () => {
 
    }
    setInterval(updatedTime,1000)
-   
+   console.log(clock);
   return(
     <div className='time--main'>
         <div className="time--clock">
