@@ -1,25 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './time.css';
 
- export default function Time() {
+export default function Time() {
+    const [clock, setClock] = useState(new Date().toLocaleTimeString());
 
-    var currentTime = new Date().toLocaleTimeString();
-    
-    console.log(currentTime)
-    const[clock,setclock] =useState(currentTime)
-    const updatedTime = ()=>{
-       var currentTime = new Date().toLocaleTimeString();
-       setclock(currentTime)
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setClock(new Date().toLocaleTimeString());
+        }, 1000);
 
-   }
-   setInterval(updatedTime,1000)
-   console.log(clock);
-  return(
-    <div className='time--main'>
-        <div className="time--clock">
-            <h1 >{currentTime}</h1>
+        return () => clearInterval(intervalId); // Cleanup on unmount
+    }, []);
+
+    return (
+        <div className='time--main'>
+            <div className="time--clock">
+                <h1>{clock}</h1>
+            </div>
         </div>
-
-    </div>
-  );
+    );
 }

@@ -1,28 +1,66 @@
-.time--clock{
+/* Overall styling for the main container */
+.time--main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #0a0a0a; /* Dark background for better contrast */
+}
+
+/* Styling for the clock container */
+.time--clock {
     display: flex;
     justify-content: center;
-    position: absolute;   
-    bottom: 50%;
-    right: 30%;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-size: 50px;
-    cursor: pointer;
-    transition: 0.4s;
+    align-items: center;
+    position: relative;
+    padding: 20px 40px;
     border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparent background */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    animation: pulse 1.5s infinite; /* Continuous pulse effect */
+}
 
-}
-.time--clock:hover{
+/* Hover effect for the clock */
+.time--clock:hover {
     background-color: rgba(154, 204, 204, 0.459);
+    transform: scale(1.1); /* Slight zoom on hover */
 }
-.time--clock h1{
+
+/* Styling for the clock text */
+.time--clock h1 {
+    font-size: 50px;
     font-weight: 600;
-    
-}
-h1{
-    line-height: 120%;
-    background: linear-gradient(90deg,#0a0a0a 40%,#9e08fb 100%);
+    line-height: 1.2;
+    color: #ffffff;
+    text-shadow: 0 0 10px #9e08fb, 0 0 20px #9e08fb; /* Glowing text effect */
+    animation: fadeIn 1s forwards; /* Fade-in effect */
+    background: linear-gradient(90deg, #ffffff 40%, #9e08fb 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
